@@ -1,22 +1,22 @@
-'use client';
+"use client";
 
-import { AddButton } from '@/components/ui/AddButton/AddButton';
-import { WishlistButton } from '@/components/ui/WishlistButton/WishlistButton';
-import { Product } from '@/types/products';
-import { motion } from 'framer-motion';
-import type { FC } from 'react';
-import styles from '@/components/product/ShopCategoriesPrices/ShopCategoriesPrices.module.scss';
-import { productVariants } from '@/animations/productCard/productCard';
-import { Favorite } from 'grommet-icons';
-import { useAppSelector } from '@/hooks/redux-hooks/useAppSelector';
+import { AddButton } from "@/components/ui/AddButton/AddButton";
+import { WishlistButton } from "@/components/ui/WishlistButton/WishlistButton";
+import { Product } from "@/types/products";
+import { motion } from "framer-motion";
+import type { FC } from "react";
+import styles from "@/components/product/ShopCategoriesPrices/ShopCategoriesPrices.module.scss";
+import { productVariants } from "@/animations/productCard/productCard";
+import { Favorite } from "grommet-icons";
+import { useAppSelector } from "@/hooks/redux-hooks/useAppSelector";
 import {
   getButtonStyle,
   getProductTitleDiscountStyle,
   getProductTitleStyle,
-} from '@/components/themeStyles/productCard/productCard';
-import { Stars } from '@/fixtures/productRating/productRating';
-import { useProductActions } from '@/hooks/useProductActions';
-import { colors } from '@/theme/theme-variables';
+} from "@/components/themeStyles/productCard/productCard";
+import { Stars } from "@/fixtures/productRating/productRating";
+import { useProductActions } from "@/hooks/useProductActions";
+import { colors } from "@/theme/theme-variables";
 
 export interface ShopCategoryProductCardProps {
   product: Product;
@@ -87,16 +87,16 @@ export const ShopCategoryProductCard: FC<ShopCategoryProductCardProps> = ({
             <AddButton
               type="button"
               className={`${styles.cardAddButton} ${
-                isAddedCart ? styles.active : ''
+                isAddedCart ? styles.active : ""
               }`}
               style={getButtonStyle(theme)}
               onClick={handleAddProduct}
             >
-              {isAddedCart ? 'Added to cart' : 'Add to cart'}
+              {isAddedCart ? "Added to cart" : "Add to cart"}
             </AddButton>
             <WishlistButton
               className={`${styles.cardWishListButton} ${
-                isAddedFavorite ? styles.activeFavorite : ''
+                isAddedFavorite ? styles.activeFavorite : ""
               }`}
               type="button"
               style={getProductTitleStyle(theme)}
@@ -105,10 +105,10 @@ export const ShopCategoryProductCard: FC<ShopCategoryProductCardProps> = ({
               <Favorite
                 color={
                   isAddedFavorite
-                    ? 'white'
-                    : 'plain' && theme === 'dark'
-                    ? 'plain'
-                    : colors.white
+                    ? "white"
+                    : theme === "dark"
+                      ? "plain"
+                      : colors.white
                 }
               />
               Wishlist
