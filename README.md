@@ -1,62 +1,48 @@
 # DreamSpace-Interiors
 
-## 📝 Overview
-**DreamSpace-Interiors** is a web platform for interior design. It helps users find design inspiration, manage projects, and select furniture and decor items.
+## 📖 Overview
+DreamSpace-Interiors is a modern web platform for interior design inspiration, project planning, and furniture selection. It helps users explore design ideas, manage interior projects, and discover products and services for home improvement.
 
----
-
-## ✨ Key Features
-- **Design inspiration** — curated interior design ideas  
-- **Project management** — create and track design projects  
-- **Product selection** — browse and choose furniture and decor  
-- **Location services** — find nearby showrooms and design resources  
-
----
+## 🚀 Features
+- Interior design inspiration gallery
+- Project creation and management tools
+- Furniture and decor browsing
+- Location-based search for nearby showrooms
+- Interactive and responsive UI experience
+- Smooth animations and modern UX components
 
 ## 🛠 Tech Stack
 
-### Core
-- Next.js — server-side rendering and static site generation  
-- React.js — UI library  
-- TypeScript — static typing  
+Frontend:
+- React
+- Next.js
+- TypeScript
 
-### Styling
-- HTML5  
-- SCSS Modules  
-- Styled-Components  
-- Grommet Icons  
+Other:
+- Redux Toolkit
+- React Redux
+- Redux Persist
+- Next Redux Wrapper
+- React Hook Form
+- @react-google-maps/api
+- use-places-autocomplete
+- Swiper.js
+- React Loader Spinner
+- Framer Motion
+- Styled-Components
+- Emotion (React & Styled)
+- Material UI (MUI)
+- Headless UI
+- Grommet Icons
+- dotenv
+- Jest
+- React Testing Library
+- TypeScript
+- Node.js / npm
 
-### State Management
-- Redux Toolkit  
-- Redux Persist  
-- Next Redux Wrapper  
-
-### Forms
-- React Hook Form  
-
-### Maps & Location
-- @react-google-maps/api  
-- use-places-autocomplete  
-
-### UI / UX
-- Swiper.js  
-- react-loader-spinner  
-
-### Utilities
-- dotenv  
-- react-cool-onclickoutside  
-
-### Development Tools
-- npm  
-- ESLint  
-- TypeScript  
-- Node Types  
-- React Types  
-
----
-
-## 🚀 Getting Started
-
-### 1. Clone the repository
+## 📦 Installation
 ```bash
 git clone https://github.com/your-username/DreamSpace-Interiors.git
+cd DreamSpace-Interiors
+npm install
+npm run dev
