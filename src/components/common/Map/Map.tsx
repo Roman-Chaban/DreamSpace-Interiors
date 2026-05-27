@@ -1,25 +1,25 @@
-import type { FC } from 'react';
-import React, { useCallback, useRef } from 'react';
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
-import styles from './Map.module.scss';
-import { DefaultOptions } from './defaultOptions/defaultOptions';
-import { MapLoader } from './MapLoader/MapLoader';
-import { useAppSelector } from '@/hooks/redux-hooks/useAppSelector';
-import { lightTheme } from './MapThemes/lightTheme';
-import { darkTheme } from './MapThemes/darkTheme';
+import type { FC } from "react";
+import React, { useCallback, useRef } from "react";
+import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
+import styles from "./Map.module.scss";
+import { DefaultOptions } from "./defaultOptions/defaultOptions";
+import { MapLoader } from "./MapLoader/MapLoader";
+import { useAppSelector } from "@/hooks/redux-hooks/useAppSelector";
+import { lightTheme } from "./MapThemes/lightTheme";
+import { darkTheme } from "./MapThemes/darkTheme";
 
 const containerStyle = {
-  width: '100%',
-  height: '404px',
+  width: "100%",
+  height: "404px",
 };
 
 interface MapProps {
   center: { lat: number; lng: number };
 }
 
-const API_KEY = 'AIzaSyBp2mAlPSQtPGwHhLdsauOP8bTANnLpkQk' || '';
+const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? "";
 
-const libraries: string[] = ['places'];
+const libraries: string[] = ["places"];
 
 export const Map: FC<MapProps> = ({ center }) => {
   const mapRef = useRef<google.maps.Map | undefined>(undefined);
@@ -32,11 +32,11 @@ export const Map: FC<MapProps> = ({ center }) => {
     scaleControl: false,
     streetViewControl: false,
     rotateControl: false,
-    styles: mapTheme === 'dark' ? lightTheme : darkTheme,
+    styles: mapTheme === "dark" ? lightTheme : darkTheme,
   };
 
   const { isLoaded } = useJsApiLoader({
-    id: 'google-map-script',
+    id: "google-map-script",
     googleMapsApiKey: API_KEY,
   });
 
